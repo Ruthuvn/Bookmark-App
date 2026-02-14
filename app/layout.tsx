@@ -22,12 +22,19 @@ const spaceMono = localFont({
 });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ;
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  process.env.VERCEL_URL ||
+  "http://localhost:3000";
+
+const resolvedSiteUrl = siteUrl.startsWith("http")
+  ? siteUrl
+  : `https://${siteUrl}`;
+
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(resolvedSiteUrl),
   title: {
-    default: "Dev Atlas | Your Digital Library, Perfectly Organized",
+    default: "Dev Atlas | Your Bookmarks, Perfectly Organized",
     template: "%s | Dev Atlas",
   },
   description:
@@ -47,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: siteUrl,
+    url: resolvedSiteUrl,
     siteName: "Dev Atlas",
     title: "Dev Atlas | Your Digital Library, Perfectly Organized",
     description:
