@@ -5,7 +5,8 @@
   "description": "Capture and organize web bookmarks in Dev Atlas.",
   "permissions": ["tabs", "activeTab", "storage"],
   "host_permissions": [
-    "http://localhost:3000/api/*"
+    "http://localhost:3000/api/*",
+    "https://bookmark-app-atlas.vercel.app/api/*"
   ],
   "action": {
     "default_popup": "popup.html",

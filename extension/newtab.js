@@ -1,5 +1,5 @@
 // Dev Atlas New Tab - Simplified dashboard-style UX
-
+const API_BASE = "https://bookmark-app-atlas.vercel.app/api"; 
 // ========================================
 // STATE & CONFIG
 // ========================================

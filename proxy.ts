@@ -7,7 +7,7 @@ export async function proxy(request: NextRequest) {
   const isAllowedOrigin =
     origin &&
     (origin.startsWith("chrome-extension://") ||
-      origin === "https://mindcave.vercel.app" ||
+      origin === "https://bookmark-app-atlas.vercel.app/" ||
       origin === "http://localhost:3000");
 
   if (request.method === "OPTIONS") {
