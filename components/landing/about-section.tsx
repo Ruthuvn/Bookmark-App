@@ -10,36 +10,24 @@ const AnimationSkeleton = () => (
 );
 
 // Dynamic imports for code splitting
-const VaultDemo = dynamic(
-  () => import("./demos/vault-demo").then((m) => m.VaultDemo),
-  { ssr: false, loading: () => <AnimationSkeleton /> }
-);
 
-const CategoriesDemo = dynamic(
-  () => import("./demos/about-categories-demo").then((m) => m.CategoriesDemo),
-  { ssr: false, loading: () => <AnimationSkeleton /> }
-);
 
-const AboutAccessDemo = dynamic(
-  () => import("./demos/about-access-demo").then((m) => m.AboutAccessDemo),
-  { ssr: false, loading: () => <AnimationSkeleton /> }
-);
 
 const pillars = [
   {
     title: "Centralized",
     description: "All your links in one organized vault",
-    Demo: VaultDemo,
+   
   },
   {
     title: "Organized",
     description: "Custom categories to sort everything",
-    Demo: CategoriesDemo,
+    
   },
   {
     title: "Accessible",
     description: "Instant search finds anything fast",
-    Demo: AboutAccessDemo,
+    
   },
 ];
 
@@ -71,9 +59,7 @@ export function AboutSection() {
               transition={{ delay: index * 0.1 }}
               className="border border-border bg-card"
             >
-              <LazyRender minHeight={192} placeholder={<AnimationSkeleton />}>
-                <pillar.Demo />
-              </LazyRender>
+          
               <div className="p-3 sm:p-6">
                 <h3 className="mb-2 text-xl font-semibold text-foreground">
                   {pillar.title}
