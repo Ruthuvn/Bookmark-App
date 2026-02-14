@@ -65,7 +65,7 @@ Dev Atlas is a production-ready bookmark manager built with Next.js and Supabase
 ## Core Features
 
 ✅ **Google OAuth Only** - Streamlined signup/login via Google, no email/password required  
-✅ **Add Bookmarks** - Save URL + auto-fetched metadata (title, description, favicon, preview image)  
+✅ **Add Bookmarks** - Save URL + auto-fetched metadata (title, description)  
 ✅ **Private Bookmarks** - Row Level Security ensures data isolation between users  
 ✅ **Real-time Updates** - Changes sync instantly across all open tabs without page refresh  
 ✅ **Delete Bookmarks** - Users can delete their own bookmarks  
@@ -89,12 +89,9 @@ Dev Atlas is a production-ready bookmark manager built with Next.js and Supabase
 | ---------- | ------------------------------------------ |
 | Framework  | Next.js 15 (App Router), React 19, TypeScript |
 | Styling    | Tailwind CSS v4, Shadcn/ui, Base UI        |
-| Animations | Framer Motion                              |
 | State      | TanStack React Query                       |
 | Backend    | Supabase (PostgreSQL, Auth, Realtime, RLS)  |
-| Icons      | Hugeicons (80+ options)                    |
 | Forms      | Server Actions for OAuth                   |
-| Analytics  | Umami (privacy-focused)                    |
 
 ---
 
@@ -221,19 +218,4 @@ Applied to all interactive elements, buttons, links, and highlights.
 
 ---
 
-## Browser Support
 
-- Chrome/Edge 90+
-- Firefox 88+
-- Safari 14+
-- Mobile browsers (iOS Safari 14+, Chrome Mobile)
-
----
-
-## License
-
-Creative Commons Attribution-ShareAlike 4.0 International
-
----
-
-**Built with ❤️ for people who collect knowledge**
